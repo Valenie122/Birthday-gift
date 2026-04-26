@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 💖</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #ffe4ec, #fff0f5);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Title */
+h1 {
+  color: #ff6f91;
+}
+
+/* Envelope */
+.envelope-wrapper {
+  position: relative;
+  margin-top: 40px;
+}
+
+.envelope {
+  width: 220px;
+  height: 140px;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.flap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffb6c1;
+  clip-path: polygon(0 0, 100% 0, 50% 60%);
+  transform-origin: top;
+  transition: 0.8s ease;
+  z-index: 3;
+}
+
+.body {
+  background: #ffc0cb;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.envelope.open .flap {
+  transform: rotateX(-180deg);
+}
+
+/* Letter sliding */
+.letter {
+  width: 85%;
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  white-space: pre-wrap;
+
+  transform: translateY(-200px);
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.letter.show {
+  transform: translateY(20px);
+  opacity: 1;
+}
+
+/* Floating petals */
+.petal {
+  position: fixed;
+  top: -20px;
+  font-size: 20px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+/* Fireworks */
+.firework {
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  background: pink;
+  border-radius: 50%;
+  animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+  to {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎂 Happy Birthday Monica Mon Mon!! 🎂</h1>
+<p>Tap the envelope!! 💌</p>
+
+<div class="envelope-wrapper">
+  <div class="envelope" onclick="openLetter(this)">
+    <div class="flap"></div>
+    <div class="body"></div>
+  </div>
+</div>
+
+<div id="letter" class="letter"></div>
+
+<audio autoplay loop>
+  <source src="https://files.catbox.moe/kkw9ns.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const text = `HAPPY BIRTHDAY MON MON<3 Happy sweet 21 and May God bless you always dear!!!<3 Another year, another birthday where we spend apart from each other. I won’t write too long hopefully hihi cause I’m sure there’s more people who wanna wish a blessed birthday to you too. Maybe a bit sappy but who am I kalau x dramatic eh
+
+To my dearest Monica,
+Happy blessed birthday!!!!! Once again, I wanna tell you again and again cause it’s such a special day to you, me and all of your beloved ones. It’s a bit sad we can’t celebrate it together again this year because I study abroad, I may have a little selfish wish where if it’s different and you’d still be here in UPM, but then again as you said the course isn’t what you want. I care about your success, happiness and well-being so whatever is laying ahead in life for you, I hope it will one heck one a blessing and full of joy that’s coming your way.
+
+You are such a blessing to me, a blessing in a disguise of a prayer gifted to me. I’m so glad we became friends and heck, until we reach our best friend level hoho. I couldn’t ask for a better best friend. We may not speak with each other every day and busy with our life but when we do chat, it’s as if the distance nor time apart never change us at all. Both of us are growing up into adulthood and challenges will come again and again, but even so, I truly wish and hope and know that wouldn’t affect us. EVEN if it DID… I’m sure we’ll figure it out one way or the other. Even if we’re not always 24/7 talking to you, I would always find the time to talk about you with others and showing you off, bestie yurhh cause I got one baddie, gorgeous, magnificent, beautiful, chaotic, strong and playful waifu, of course with a lil’s spice and all ya know?? But know this gurl ;
+
+I wouldn’t trade you for the world.
+
+That’s how much you mean to me, until the day we breath our last, you will always and always will be my greatest bundle of flower gifted to me. A sunflower is how I would like to describe you, one that pulls the attention of others, warm and beautiful amidst the other flowers. I know you like Tulips, babybreath and all but when I see you, I see sunflower. (CIEHHHH-) One day, one of us may go before the other, but whichever goes first, the other need to live a long life so we can tell a lot of story in the afterlife.
+
+So even if I’m not there to celebrate with you, I hope your damn bf treats you well on your special day. IF ANYTHING REPORT BABE, SPILL DEM TEA I WILL MAKE TIME FOR U BBYGURL. Take a lot of pics too, I wanna show you off to my friends here CAUSE YOU SO DAMN GORGEOUS PIECE OF ART CUIH. Take care of yourself, I know you’re capable of doing so but sometimes you can be stubborn and abandon yourself when the world crushes you down, I don’t blame and never will. I’ll take my stance and will ALWAYS trust and stand by your choice. It’s your life and never ever let others take advantage of it, you hear me baddie??? I HOPE YOU SAY AYE HERE GOT IT??? 
+
+I think that’s all for my letter and wish to you. Did I wish you happiest birthday? HAPPY BIRTHDAYYYYYY TO YOUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU YURHHHHH HAPPIEST BIRTHDAYYYYYYYYYYYYYYYY TOOOOOOOOOOOOOOOOOOOOOOOO YOOOUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
+
+MUAH MUAH MUAH MUAH<3333
+
+I hope that in every lifetime, whichever it is, whatever happen, wherever it it whether multiverse existed or not? If reincarnation exists and if God allows... I’d like you to be my best friend again in all of them.
+
+Love you as always and on the days to come,
+Meot, Your lawfully wedded husbando`;
+
+let i = 0;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("letter").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 15);
+  }
+}
+
+function openLetter(el) {
+  el.classList.toggle("open");
+
+  let letter = document.getElementById("letter");
+  letter.classList.add("show");
+
+  if (letter.innerHTML === "") {
+    typeWriter();
+    document.getElementById("music").play();
+    launchFireworks();
+  }
+}
+
+/* petals */
+setInterval(() => {
+  let petal = document.createElement("div");
+  petal.className = "petal";
+  petal.innerHTML = Math.random() > 0.5 ? "🌻" : "🌷";
+  petal.style.left = Math.random() * 100 + "vw";
+  petal.style.animationDuration = (Math.random() * 3 + 3) + "s";
+  document.body.appendChild(petal);
+
+  setTimeout(() => petal.remove(), 6000);
+}, 300);
+
+/* fireworks */
+function launchFireworks() {
+  for (let i = 0; i < 20; i++) {
+    let fw = document.createElement("div");
+    fw.className = "firework";
+    fw.style.left = Math.random() * 100 + "vw";
+    fw.style.top = Math.random() * 50 + "vh";
+    document.body.appendChild(fw);
+
+    setTimeout(() => fw.remove(), 1000);
+  }
+}
+</script>
+
+</body>
+</html>
